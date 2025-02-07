@@ -23,3 +23,6 @@ This repository contains coding solutions for various problems ranging from begi
 1. Clone the repository:
    ```bash
    git clone https://github.com/akashreddy-ops/coding-solutions.git
+   🔗 Connect with Me
+-> LinkedIn: My Profile
+-> GitHub: @akashreddy-ops
