@@ -16,7 +16,7 @@ This repository contains coding solutions for various problems ranging from begi
 
 ## 📂 Folder Structure
 - `/Beginner` - Simple problems for learning basic concepts.
-- `/Intermediate` - Problems requiring more efficient logic.
+- `/Intermediate` - Problems requiring more Efficient Logic.
 - `/Advanced` - Complex problems involving advanced techniques.
 
 ## 💡 How to Use
