@@ -1,1 +1,75 @@
 
+// +++++++++++++++++++++++++++++++++ Linear Search ++++++++++++++++++++++++++++++++++
+// public class DSA{
+//     public static int linearSearch(int[] a, int key){
+//         for(int i=0; i<a.length; i++){
+//             if(a[i] == key){
+//                 return i;
+//             }
+//         }
+//         return -1;
+//     }
+//     public static void main(String[] args){
+//         int[] a = {50,10,33,40,26};
+//         int key = 40;
+//         System.out.println(linearSearch(a,key));
+//     }
+// }
+
+
+// ++++++++++++++++++++++++++++ Binary Search +++++++++++++++++++++++++++++++++++++++++++
+// public class DSA{
+//     public static int binarySearch(int[] a, int key){
+//         int low = 0, high = a.length-1, mid = 0;
+//         while(low <= high){
+//             mid = (low + high) / 2;
+//             if(key == a[mid]){
+//                 return mid;
+//             }
+//             else if(key < a[mid]){ 
+//                 high = mid - 1;
+//                 low = low;
+//             }
+//             else{
+//                 low = mid + 1;
+//                 high = high;
+//             }
+//         }
+//         return - 1;
+//     }
+//     public static void main(String[] args){
+//         int [] a = {3,5,6,8,12,15,16,19,21};
+//         int key = 13;
+//         System.out.println(binarySearch(a, key));
+//     }
+// }
+
+
+
+
+// ++++++++++++++++++++++ Bubble Sorting ++++++++++++++++++++++++++++++++++
+// import java.util.Scanner;
+// public class DSA{
+//     static void bubbleSort(int []arr){
+//         for(int i=0; i<arr.length-1; i++){
+//             if(arr[j] > arr[j+1]){
+//                 int temp = arr[j];
+//                 arr[j] = arr[j+1];
+//                 arr[j+1] = temp;
+//             }
+//         }
+//     }
+// }
+
+// public static void main(String[] args){
+//     Scanner SC = new Scanner(System.in);
+//     int n = SC.nextInt();
+//     int[] arr = new int[n];
+//     for(int i=0; i<arr.length; i++){
+//         arr[i] = SC.nextInt();
+//     }
+//     bubbleSort(arr);
+//     for(int i=0; i<arr.length; i++){
+//         System.out.println(arr[i] + " ");
+//     }
+// }
