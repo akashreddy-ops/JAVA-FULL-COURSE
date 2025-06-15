@@ -1,0 +1,111 @@
+// +++++++++++++++++++ Two Sum Leetcode +++++++++++++++++++++++++++++++++++
+class Solution{
+    public int[] twoSum(int[] nums, int target){
+        int[] arr = new int[2];
+        for(int i=0; i<nums.length; i++){
+            for(int j=0; j<nums.length; j++){
+                if(nums[i] + nums[j] == target){
+                    arr[0] = i;
+                    arr[1] = j;
+                    break;
+                }
+            }
+        }
+        return arr;
+    }
+}
+
+
+
+// ++++++++++++++++++++ Median Of Two Sorted Arrays ++++++++++++++
+class Solution {
+    public double findMedianSortedArrays(int[] nums1, int[] nums2) {
+        int i=0, j=0, n=0;
+        int[] m = new int[nums1.length + nums2.length];
+        while(i<nums1.length && j<nums2.length){
+            if(nums1[i]<nums2[j]){
+                m[n] = nums1[i];
+                i++;
+                n++;
+            }
+            else{
+                m[n] = nums2[j];
+                j++;
+                n++;
+            }
+        }
+        
+        while(i<nums1.length){
+            m[n] = nums1[i];
+                i++;
+                n++;
+        }
+        while(j<nums2.length){
+             m[n] = nums2[j];
+                j++;
+                n++;
+        }
+        if(m.length %2 ==0){
+            int mid = m.length / 2;
+           return (float)(m[mid] + m[mid-1])/2;
+
+        }
+        else {
+            int mid = m.length/2;
+            return m[mid];
+        }
+    }
+}
+
+
+
+
+
+// ++++++++++++++++++++ Container With Most Water +++++++++++++++++++++++++++++++=
+class Solution {
+    public int maxArea(int[] height) {
+        int water = 0, left = 0, right = height.length - 1;
+        while(left < right){
+            water = Math.max(water, Math.min(height[left], height[right]) * (right - left));
+            if(height[left] > height[right])
+                right --;
+            else
+                left ++;
+        }
+        return water;
+    }
+}
+
+
+
+
+// ++++++++++++++++++++++++++ 3 Sum ++++++++++++++++++++++++++++++
+class Solution {
+    public List<List<Integer>> threeSum(int[] nums) {
+        Arrays.sort(nums);
+        List<List<Integer>> output_arr = new LinkedList();
+
+        for(int i=0; i<nums.length - 2; i++){
+            if(i == 0 || (i > 0 && nums[i] != nums[i-1])){
+                int low = i+1;
+                int high = nums.length-1;
+                int sum = 0-nums[i];
+
+                while(low<high){
+                    if(nums[low] + nums[high] == sum){
+                        output_arr.add(Arrays.asList(nums[i], nums[low], nums[high]));
+                        while(low < high && nums[low] == nums[low + 1]) low++;
+                        while(high < low && nums[high] == nums[high + 1]) high--;
+                        low++;
+                        high--;
+                    }else if(nums[low] + nums[high] > sum){
+                        high--;
+                    }else{
+                        low++;
+                    }
+                }
+            }
+        }
+        return output_arr;
+    }
+}
