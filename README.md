@@ -26,3 +26,11 @@ This repository contains coding solutions for various problems ranging from begi
    🔗 Connect with Me
 -> LinkedIn: My Profile
 -> GitHub: @akashreddy-ops
+
+🙋‍♂️ Author
+👨‍💻 Akash Reddy
+🔗 GitHub
+🔗 LinkedIn
+
+📄 License
+This project is licensed under the MIT License.
