@@ -1,0 +1,28 @@
+Whenever you are solving Hackerrank Problem in Java-> always try to cut the already written code in the compiler ; make the full writing space empty then continue to write your own code. 
+You can always use this template to write any java code on Hackerrank ->
+
+
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+
+public class MyClass {
+    public static void main(String args[]) {
+      
+      
+      Scanner in = new Scanner(System.in);
+      int a ;
+      int b ; 
+      int c ;
+      a = in.nextInt();
+      b = in.nextInt();
+      c = a + b ; 
+      
+      System.out.println(c);
+    }
+}
+
