@@ -34,3 +34,13 @@ This repository contains coding solutions for various problems ranging from begi
 
 📄 License
 This project is licensed under the MIT License.
+
+
+# HACKER TEMPLATE
+
+   Whenever you are solving Hackerrank Problem in Java-> always try to cut the already written code in the compiler ; make the full writing space empty then continue to write your own code. 
+   You can always use this template to write any java code on Hackerrank ->
+
+   -> https://www.jdoodle.com/online-java-compiler/ is a good compiler for java to check your code.
+   To get link of the code use.-> https://ideone.com/fMUh0X 
+
