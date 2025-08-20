@@ -1,7 +1,19 @@
 HashMap Question:- using Brute Force
 Q1:- We are given an array of numbers. We have to find print any number with maximum frequency and minimum frequency
 
+Example TestCase:-  Arr=[3,2,3,2,4,3]
+           Frequencies of elements of array are:-
+                          3 - 3
+                          2 - 2
+                          4 - 1
+           maximum Frequency:- Element is 3, Frequency is 3
+           Minumum Frequency;- Element is 4, Frequency is 1
+-> Brute Force Approach will work in O(N^2) because of 2 nested for loops 
 
+Optimized Approach:- use HashMap to store the frequencies of elements where key will be the array element and value will be the frequency of array element and update our maximum frequency and minimum frequency
+
+
+Code:- 
 import java.util.HashMap;
 import java.util.Map;
  
