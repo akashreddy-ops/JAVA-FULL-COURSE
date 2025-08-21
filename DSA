@@ -119,3 +119,64 @@ public class Main {
     }
 }
 
+
+
+
+Q3:- Count all the (i,j) Pairs such that b[i] + b[j] == k (count of such pairs.) [i<j] 
+
+Sol:-  
+           Brute Force Approach:- Iterate over all i and j and check if(arr[i] + arr[j] == k), increment cnt by 1. At the end, print this total Count
+
+Code:- For Brute Force
+import java.util.*;
+public class Main {
+    public static int bruteForceCountPairs(int[] arr, int k) {
+        int count = 0;
+        for (int i = 0; i < arr.length - 1; ++i) {
+            for (int j = i + 1; j < arr.length; ++j) {
+                if (arr[i] + arr[j] == k) {
+                    count++;
+                }
+            }
+        }
+        return count;
+    }
+ 
+    public static void main(String[] args) {
+        int[] arr = {1, 2, 3, 4, 5};
+        int k = 6;
+        System.out.println("Count of pairs: " + bruteForceCountPairs(arr, k));
+    }
+}
+
+
+
+Optimised Approach:- At each Index i, we will find the Complementary Element We need. Now, we will check if this Complementary Element is present in Map Already, we will do cnt+=frequency of complement. We will now update entry of our current index element in map.
+
+Code:- For Hash Map 
+import java.util.*;
+ 
+public class Main {
+    static int countPairsWithSum(int[] b, int k) {
+        int count = 0;
+        Map<Integer, Integer> seen = new HashMap<>();
+ 
+        for (int j = 0; j < b.length; ++j) {
+            int complement = k - b[j];
+            if (seen.containsKey(complement)) {
+                count++;
+            }
+            seen.put(b[j], j);
+        }
+ 
+        return count;
+    }
+ 
+    public static void main(String[] args) {
+        int[] b = {1, 2, 3, 4, 5};
+        int k = 6;
+        int count = countPairsWithSum(b, k);
+ 
+        System.out.println("Count of pairs with sum " + k + " is: " + count);
+    }
+}
