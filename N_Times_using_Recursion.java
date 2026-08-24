@@ -1,3 +1,4 @@
+// Print name n Times Using Recursion
 class Solution{
     public void printName(String name, int count, int n){
         if(count == n){
@@ -15,3 +16,6 @@ public class Main{
         sol.printName(name, 0, n);
     }
 }
+
+
+// Print 1 To N using Recursion
