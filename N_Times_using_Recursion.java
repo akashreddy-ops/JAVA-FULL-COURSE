@@ -19,3 +19,21 @@ public class Main{
 
 
 // Print 1 To N using Recursion
+class Solution{
+    public void printNumbers(int curr, int n){
+        if(curr > n){
+            return;
+        }
+        System.out.println(curr + " ");
+        printNumbers(curr + 1, n);
+    }
+}
+public class Main{
+    public static void main(String[] args){
+        Solution sol = new Solution();
+        int n = 5;
+        sol.printNumbers(1, n);
+        System.out.println();
+    }
+}
+
