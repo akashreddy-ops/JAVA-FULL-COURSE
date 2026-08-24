@@ -18,7 +18,7 @@ public class Main{
 }
 
 
-// Print 1 To N using Recursion
+// Print 1 To N using Recursion  // Forward Recursion
 class Solution{
     public void printNumbers(int curr, int n){
         if(curr > n){
@@ -32,6 +32,25 @@ public class Main{
     public static void main(String[] args){
         Solution sol = new Solution();
         int n = 5;
+        sol.printNumbers(1, n);
+        System.out.println();
+    }
+}
+
+// BackTracking
+class Solution{
+    public void printNumbers(int curr, int n){
+        if(curr > n){
+            return;
+        }
+        printNumbers(curr + 1, n);
+        System.out.print(curr + " ");
+    }
+}
+public class Main{
+    public static void main(String[] args){
+        Solution sol = new Solution();
+        int n = 10;
         sol.printNumbers(1, n);
         System.out.println();
     }
