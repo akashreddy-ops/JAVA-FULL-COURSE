@@ -95,3 +95,77 @@ public class Main{
         System.out.println();
     }
 }
+
+
+// Sum of first N Natural Numbers  // We can use the formula for the sum of N numbers, i.e N(N+1)/2.
+// Using Formula Directly
+import java.util.*;
+class Solution{
+    public int sumOfNaturalNumbers(int n){
+        return (n * (n + 1)) / 2;
+    }
+}
+public class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        Solution sol = new Solution();
+        int n= sc.nextInt();
+        System.out.println(sol.sumOfNaturalNumbers(n));
+        sc.close();
+    }
+}
+
+// Recursive Approach
+
+import java.util.*;
+class Solution{
+    public int sumOfNaturalNumbers(int n){
+        if(n == 1){
+            return 1;
+        }
+        return n + sumOfNaturalNumbers(n - 1);
+    }
+}
+public class Main{
+    public static void main(String[] args){
+        Solution sol = new Solution();
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        System.out.println(sol.sumOfNaturalNumbers(n));
+        sc.close();
+        
+    }
+}
+
+// Factorial of a Number : Iterative and Recursive
+// Iterative Solution 
+public class Main{
+    public static int factorial(int x){
+        int ans = 1;
+        
+        for(int i=1; i<=x; i++){
+            ans = ans * i;
+        }
+        return ans;
+    }
+    public static void main(String[] args){
+        int x = 5;
+        int result = factorial(x);
+        System.out.println("The factorial of: " + x + " is " + result);
+    }
+}
+
+// Recursive Solution
+public class Main {
+
+    public static int factorial(int n) {
+        if (n == 0) {
+            return 1;
+        }
+        return n * factorial(n - 1);
+    }
+    public static void main(String[] args) {
+        int n = 3;
+        System.out.println(factorial(n));
+    }
+}
