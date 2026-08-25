@@ -56,3 +56,42 @@ public class Main{
     }
 }
 
+
+
+// Print N to 1 Using Recursion  // Forward Recursion
+class Solution{
+    public void printNumbers(int curr){
+        if(curr < 1){
+            return;
+        }
+        System.out.print(curr + " ");
+        printNumbers(curr - 1);
+    }
+}
+public class Main{
+    public static void main(String[] args){
+        Solution sol = new Solution();
+        int n = 10;
+        sol.printNumbers(n);
+        System.out.println();
+    }
+}
+
+// BackTracking
+class Solution{
+    public void printNumbers(int curr){
+        if(curr < 1){
+            return;
+        }
+        printNumbers(curr - 1);
+        System.out.print(curr + " ");
+    }
+}
+public class Main{
+    public static void main(String[] args){
+        Solution sol = new Solution();
+        int n = 10;
+        sol.printNumbers(10);
+        System.out.println();
+    }
+}
