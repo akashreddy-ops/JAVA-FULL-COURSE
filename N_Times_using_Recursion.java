@@ -169,3 +169,53 @@ public class Main {
         System.out.println(factorial(n));
     }
 }
+
+
+// Print Fibonacci Series up to Nth term
+// Better Approach
+public class FibonacciEfficient {
+    public static void main(String[] args) {
+        int n = 5;
+
+        if (n == 0) {
+            System.out.println("The Fibonacci Series up to " + n + "th term:");
+            System.out.println(0);
+        } else {
+            int secondLast = 0; // (i-2)th term
+            int last = 1;       // (i-1)th term
+
+            System.out.println("The Fibonacci Series up to " + n + "th term:");
+            System.out.print(secondLast + " " + last + " ");
+
+            int cur;
+            for (int i = 2; i <= n; i++) {
+                cur = last + secondLast;  // Calculate current term
+                secondLast = last;        // Slide the window
+                last = cur;
+                System.out.print(cur + " ");
+            }
+        }
+    }
+}
+
+
+// Optimal Approach
+public class RecursiveFibonacci {
+
+    public static int fibonacci(int N) {
+        if (N <= 1) {
+            return N;
+        }
+
+        int last = fibonacci(N - 1);    // (N-1)th term
+        int slast = fibonacci(N - 2);   // (N-2)th term
+
+        return last + slast;
+    }
+
+    public static void main(String[] args) {
+        int N = 4;
+        System.out.println(fibonacci(N)); 
+    }
+}
+
